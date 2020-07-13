@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center">
+      Automação com IoT      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-text-center">
+    <ion-row>
+      <ion-col size="12" style="display: flex; justify-content: center;align-items: center;">
+        <img src="assets/images/esp.png" width="120" height="120">
+        <h1 style="font-size: 30px;">ESP8266 Status</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-title>
+            Potência do sinal Wifi
+          </ion-card-title>
+          <iframe width="100%" height="200" style="border: 1px solid #cccccc;"
+            src="https://thingspeak.com/channels/1097218/widgets/198921"></iframe>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-title>
+            Temperatura
+          </ion-card-title>
+          <iframe width="450" height="260" style="display: flex !important;justify-content: center !important; margin: auto;" src="https://thingspeak.com/channels/1097218/widgets/198910"></iframe>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col   size="12">
+      <ion-button size="block" (click)="get()" color="ligth">Gerar Relatório</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
